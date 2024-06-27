@@ -1,11 +1,11 @@
-
 import { useState } from "react";
-import 
-
-
+import Cake from "../Components/Cake";
 
 const CakeContainer = () => {
-    const [CakeType, putCakes] = useState( [
+
+   
+
+    const [cakes, setCakes] = useState( [
         // Victora Sponge
         {
             cakeName: "Victoria Sponge",
@@ -17,7 +17,7 @@ const CakeContainer = () => {
                   "baking powder",
                   "milk"
               ],
-              price: 5
+              price: 5,
                rating: 5
         },
     
@@ -54,20 +54,22 @@ const CakeContainer = () => {
 
 )
 
-
 return(
     <>
+        <header>
         <h2> Cakes for sale: </h2>
-    
-    </>
+        </header>
+        <main>
+            <Cake cake = {cakes[0]}/>
+            <Cake cake ={cakes [1]}/>
+            <Cake cake = {cakes [2]}/>
+        </main>
+        
+     </>
+    )
 
-    );
-
-};
+}
 
 export default CakeContainer;
-
-
-
 
 
